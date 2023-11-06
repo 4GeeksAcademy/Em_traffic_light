@@ -8,26 +8,26 @@ const trafficLight = () => {
     const [ greenLight, setgreenLight ]= useState("green");
  
     function redChange() {
-      if (redLight === "red"){
+      if (redLight == "red"){
         setredLight('glow')
-     }else {
-      setredLight('red')
-      }
+        setyellowLight('yellow')
+        setgreenLight('green')
+     }
    }
     function yellowChange() {
-          if (yellowLight === "yellow"){
+          if (yellowLight == "yellow"){
             setyellowLight('glow' )
-         }else {
-           setyellowLight('yellow')
-          }
+            setgreenLight('green')
+            setredLight('red')
+         }
        }
     function greenChange() {
-        if (greenLight === "green"){
+        if (greenLight == "green"){
           setgreenLight('glow' )
-        }else {
-         setgreenLight('green')
-      }
-     }
+          setredLight('red')
+          setyellowLight('yellow')
+            }
+         }
 	
     return (
 
